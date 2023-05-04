@@ -1,6 +1,5 @@
 import rhinoscriptsyntax as rs
 import Rhino.Geometry as rg
-import System.Guid
 import math
 import Rhino
 
@@ -50,7 +49,7 @@ for obj in objs:
         point_tuple = (point_obj[0], point_obj[1])
         base_points.append(point_tuple)
 
-#Initializes the first point list
+#Initializes a list for the first point
 first_point = []
 
 #Figures out which points from base_points have the lowest x value
@@ -59,7 +58,7 @@ first_point = []
 #Initializes a variable to figure out the smallest y value
 min_y = float('inf')
 
-#Loops through all the points and writes the one with the smallest y in the first_point variable
+#Loops through all the points and writes the one with the smallest y in the first_point list
 for point in base_points:
     if point[1] <= min_y:
         min_y = point[1]
